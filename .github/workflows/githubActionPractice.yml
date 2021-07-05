@@ -7,3 +7,14 @@ jobs:
     steps:
       - name: Printing name
         run: echo "Welcome All"
+  second-github-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check directory & print in-build environment values
+        run: |  
+          pwd
+          ls -lrt
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{github.token}}"
