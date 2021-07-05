@@ -1,0 +1,9 @@
+name: Github Actions Practice
+on: [push]
+
+jobs:
+  First-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing name
+        run: echo "Welcome All"
